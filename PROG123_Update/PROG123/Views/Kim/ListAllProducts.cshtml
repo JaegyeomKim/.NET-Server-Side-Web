@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "ListAllProducts";
+    Layout = "~/Views/Shared/_KimLayout.cshtml";
+}
+
+@model LinkedList<PROG123.Models.ProductModel>
+<h1>ListAllProducts</h1>
+
+@foreach (PROG123.Models.ProductModel productModel in Model)
+{
+<div class="inputwrap">
+    <label>@productModel.Name</label>
+    <label style="width:120px;">@productModel.Description</label>
+    <label>@productModel.Price</label>
+    <label>@productModel.PID</label>
+    <label>@productModel.InventoryAmount</label>
+
+
+    <a href="@Url.Action("OneClickBuy","Kim", new {PID = productModel.PID})">Buy</a>
+</div>
+}

@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/KimCSS.css" rel="stylesheet" />  
+    
+</head>
+<body>
+    <header>
+        <img src="~/images/MyName.jpg" />
+        <br />
+    </header>
+
+    <div id="content">
+        <article>
+            @RenderBody()
+        </article>
+        <p id="headerText">Welcome @ViewBag.UserFirstName </p>
+
+    </div>
+
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Shopping</li>
+            <li>About</li>
+            <li><a href="@Url.Action("ListAllProducts","Kim")">Show Products</a></li>
+            <li><a href="@Url.Action("EnterNewProduct","Kim")">Add Products</a></li>
+            <li><a href="@Url.Action("Index","Home")">SignUp</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <pre>
+        Jaegyeom Kim
+        jaegyeom1215@gmail.com
+        
+
+        Reference
+        GrievousLayout
+        </pre>
+</footer>
+</body>
+</html>

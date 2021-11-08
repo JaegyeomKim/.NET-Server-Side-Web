@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "~/Views/Shared/_KimLayout.cshtml";
+}
+@model PROG123.Models.ProductModel
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Add Product To DB</h1>
+    <br />
+    <label>Name: </label> @Model.Name
+    <br />
+    <label>Description: </label> @Model.Description
+    <br />
+    <label>Price: </label> @Model.Price
+    <br />
+    <label>InventoryAmount: </label> @Model.InventoryAmount
+    <br />
+    <label>PID: </label> @Model.PID
+    <br />
+    <a href="@Url.Action("EnterNewProduct","Kim")">Enter Anpther Product</a>
+</body>
+</html>

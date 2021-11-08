@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "EnterNewProdect";
+    Layout = "~/Views/Shared/_KimLayout.cshtml";
+
+}
+
+@model PROG123.Models.ProductModel
+
+
+<form asp-action="AddProductToDB" method="post">
+    <div class="inputwrap">
+        <label>Name: </label>
+        <input asp-for="Name" required class=" roundCorners" />
+    </div>
+
+    <div class="inputwrap">
+        <label>Description: </label>
+        <input asp-for="Description" required class=" roundCorners" />
+    </div>
+
+    <div class="inputwrap">
+        <label>Price: </label>
+        <input asp-for="Price" required class=" roundCorners" />
+    </div>
+
+    <div class="inputwrap">
+        <label>InventoryAmount: </label>
+        <input asp-for="InventoryAmount" required class=" roundCorners" />
+    </div>
+
+
+    <div class="inputwrap">
+        <label><button type="submit">Submit</button></label>
+    </div>
+</form>

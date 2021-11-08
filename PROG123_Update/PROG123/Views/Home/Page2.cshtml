@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+}
+@model PROG123.Models.PersonModel
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Hi this is page2</h1>
+    <br />
+    @Model.FName
+    <br />
+    @Model.LName
+    <br />
+    @Model.Email
+    <br />
+    @Model.Phone
+    <br />
+    @Model.Address
+    <br />
+    @Model.UserName
+    <br />
+    @Model.Password
+    <br />
+    <a href="@Url.Action("EditPMyInfor","Home")">Edit my infor</a>
+    <a href="@Url.Action("DeletPerson","Home")">Dele my infor</a>
+
+</body>
+</html>
